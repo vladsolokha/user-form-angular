@@ -1,0 +1,25 @@
+
+$color-accent-1: #FF8552;
+$color-accent-2: #297373;
+$color-accent-3: #85FFC7;
+$color-background-1: #E6E6E6;
+$color-background-2: #39393A;
+
+.header {
+  background-color: $color-background-2;
+  color: $color-accent-3;
+  font-size: 48px;
+  font-weight: bolder;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  color: $color-background-2;
+}
+
+.footer {
+  background-color: $color-background-2;
+  color: $color-accent-3;
+}
+

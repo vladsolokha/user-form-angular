@@ -1,0 +1,17 @@
+
+mat-card {
+  cursor: pointer;
+  margin: 32px;
+  font-size: 32px;
+  padding: 24px;
+  text-align: center;
+  width: 24%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+

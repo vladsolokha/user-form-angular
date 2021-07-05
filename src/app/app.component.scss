@@ -1,25 +1,14 @@
-
-$color-accent-1: #FF8552;
-$color-accent-2: #297373;
-$color-accent-3: #85FFC7;
-$color-background-1: #E6E6E6;
-$color-background-2: #39393A;
+@import 'src/stylesheets/variables.scss';
 
 .header {
-  background-color: $color-background-2;
-  color: $color-accent-3;
-  font-size: 48px;
+  background-color: $color-accent-1;
+  font-size: 56px;
   font-weight: bolder;
-  padding: 16px;
+  padding: 72px 32px;
   text-align: center;
 }
 
-.content {
-  color: $color-background-2;
-}
-
 .footer {
-  background-color: $color-background-2;
-  color: $color-accent-3;
+  background-color: $color-accent-1;
 }
 

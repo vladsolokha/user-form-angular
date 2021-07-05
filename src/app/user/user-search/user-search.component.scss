@@ -1,0 +1,40 @@
+@import "src/stylesheets/variables";
+
+mat-spinner {
+  background-color: $color-accent-1;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  font-size: 18px;
+}
+
+td {
+  font-size: 14px;
+}
+
+tr:hover {
+  background-color: $color-accent-1;
+}
+
+tr:focus {
+  background-color: $color-accent-1;
+}
+
+#user-filter {
+  margin-left: 1em;
+}
+
+#user-table {
+  font-size: 20px;
+  margin: 2em auto;
+  width: 85%;
+}
+
+.user-loading {
+  margin: 3% 44%;
+}

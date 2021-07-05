@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Sample';
+
+  static readonly api = {
+    user: {
+      retrieve: `api/user/retrieve`,
+    },
+  };
 }

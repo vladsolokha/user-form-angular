@@ -6,7 +6,7 @@ import {UserComponent} from './user/user.component';
 import {UserFormComponent} from './user/user-form/user-form.component';
 import {UserSearchComponent} from './user/user-search/user-search.component';
 import {RouterModule} from "@angular/router";
-import {CardComponent} from './card/card.component';
+import {HomeComponent} from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CoreModule} from "./core/core.module";
 import {SharedModule} from "./shared/shared.module";
@@ -15,7 +15,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
+    HomeComponent,
     UserComponent,
     UserFormComponent,
     UserSearchComponent,
@@ -29,7 +29,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
       {path: 'user', component: UserComponent},
       {path: 'user/form', component: UserFormComponent},
       {path: 'user/search', component: UserSearchComponent},
-      {path: '', component: CardComponent},
+      {path: '', component: HomeComponent},
       {path: '**', redirectTo: '', pathMatch: 'full'},
     ]),
     SharedModule,

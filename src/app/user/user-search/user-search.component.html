@@ -1,6 +1,9 @@
-<div id="user-table" class="mat-elevation-z8">
+<div class="user-header">
+  User Search
+</div>
+<div class="mat-elevation-z8 user-table">
   <!-- Filter -->
-  <mat-form-field id="user-filter">
+  <mat-form-field class="user-filter">
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" #input />
   </mat-form-field>
@@ -34,4 +37,9 @@
 
   <!-- Paginator -->
   <mat-paginator [pageSizeOptions]="[10, 25, 50]" showFirstLastButtons></mat-paginator>
+</div>
+<div class="button-container">
+  <button routerLink="/user" mat-raised-button color="accent">
+    Back
+  </button>
 </div>

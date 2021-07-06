@@ -25,11 +25,24 @@ tr:focus {
   background-color: $color-accent-1;
 }
 
-#user-filter {
+.button-container {
+  margin: 48px 32px 32px 32px;
+
+  button {
+    width: 9%;
+  }
+}
+
+.user-filter {
   margin-left: 1em;
 }
 
-#user-table {
+.user-header {
+  font-size: 48px;
+  margin: 32px 32px 48px 32px;
+}
+
+.user-table {
   font-size: 20px;
   margin: 2em auto;
   width: 85%;

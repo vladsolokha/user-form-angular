@@ -5,6 +5,7 @@ import {User, UserState} from "../../core/store/user/user.state";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
+import {MatTooltipModule, TooltipPosition} from "@angular/material/tooltip";
 import {filter, takeUntil} from "rxjs/operators";
 
 @Component({
@@ -22,6 +23,7 @@ export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
   state: UserState | undefined;
   tableFields: string[] = ['name', 'updated'];
   tableSource!: MatTableDataSource<User>;
+  positionOptions: TooltipPosition = 'after';
 
   ngAfterViewInit(): void {
     this.userFacade

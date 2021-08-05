@@ -23,3 +23,8 @@ played with the app, to understand problem and see how it functions
 created 2 buttons, 'edit' and 'delete' in /src/user/user-search/user-search.component.html
 made them different colors according to documentation
 
+received message from Bill saying backend was messed up. 
+local port 9999 is not being received by app local port 3200
+
+received a java backend. Make it work by download/install Java11 and mvn
+

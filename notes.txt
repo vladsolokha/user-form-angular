@@ -1,0 +1,25 @@
+Notes on test completion
+
+received link from Bill
+https://trello.com/c/3DklPIG8/9-0009-frontend-add-edit-and-delete-icons-to-the-user-search-component
+
+cloned app from trello
+made github repo for me to save versions to
+first commit pushed to remote so I can access on other computers
+https://github.com/vladsolokha/user-form-angular
+
+npm i
+
+needed angular cli so in terminal $ npm install -g @angular/cli
+
+googled material.angular.io/components documentation as reference to help build app
+
+https://material.angular.io/components/categories
+
+npm serve
+
+played with the app, to understand problem and see how it functions
+
+created 2 buttons, 'edit' and 'delete' in /src/user/user-search/user-search.component.html
+made them different colors according to documentation
+

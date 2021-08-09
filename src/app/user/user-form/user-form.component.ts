@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   templateUrl: './user-form.component.html',
@@ -7,14 +6,12 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class UserFormComponent implements OnInit {
 
-  constructor( private router: Router, private route: ActivatedRoute) { }
+  constructor(   ) { }
 
-  name: 
+   
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      this.name = params['name'];
-    });
+  ngOnInit(): void { };
+  
   }
 
-}
+

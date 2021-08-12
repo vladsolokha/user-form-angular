@@ -69,4 +69,29 @@ service can inject their process/value/function/feature into any component which
 use @injectable() decorator to allow injection of service into component as dependency (class)
 
 UserFacade is a service used in user-search that uses a method dispatchRetrieve()
-to get 
+
+learned what store from ngrx is:
+it is a way to globally store state and manage it in the app
+this reading really helped me understand why store and global state management is important
+https://medium.com/@veeralpatel/things-ive-learned-about-state-management-for-react-apps-174b8bde87fb
+however, the reading is mostly noting React, Redux, and MobX state management tools
+I need one with more specific documentation on ngrx 
+https://ngrx.io/guide/  is better
+
+Next I read some more on different parts of the app
+I found Angular has types: class,const,decorator,directive,interface,pipe,ngmodule,etc
+I examined some of the ones used in the app
+
+I searched backend and found UserController has create/retrieve/update/delete decorators
+
+Got call from Ryan
+He hinted to use the Angular.io documentation specifically tour of heroes
+Which I completed a while ago, so I went back and re-read the tutorial docs
+I found something that could potentially be what I'm trying to solve
+https://angular.io/guide/forms
+
+Good info but not what I was looking for
+
+Going to read https://angular.io/tutorial/toh-pt6
+Probably closest I will get. Will read the part about "update heroes" section
+Which I speculate will work like my edit button. 

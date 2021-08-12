@@ -6,7 +6,6 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
 import {filter, takeUntil} from "rxjs/operators";
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   templateUrl: './user-search.component.html',

@@ -52,5 +52,8 @@ export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
     this.tableSource.filter = filterValue.trim().toLowerCase();
   }
 
-  
+  getSelectedName() {
+    this.userFacade.retrieve()
+  }
+
 }

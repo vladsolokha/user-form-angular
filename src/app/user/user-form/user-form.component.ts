@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {User, UserState} from "../../core/store/user/user.state";
 
 @Component({
@@ -8,9 +8,9 @@ import {User, UserState} from "../../core/store/user/user.state";
 })
 export class UserFormComponent implements OnInit {
 
-  constructor(   ) { }
+  @Input() user: UserState | undefined;
 
-   
+  constructor(   ) { }
 
   ngOnInit(): void { };
   

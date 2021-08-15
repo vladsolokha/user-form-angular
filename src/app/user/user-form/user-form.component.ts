@@ -8,7 +8,9 @@ import {User, UserState} from "../../core/store/user/user.state";
 })
 export class UserFormComponent implements OnInit {
 
-  @Input() user: UserState | undefined;
+  @Input() 
+    user: User | undefined;
+    
 
   constructor(   ) { }
 

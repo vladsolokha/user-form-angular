@@ -22,7 +22,8 @@
 
     <!-- Print Fields -->
     <tr mat-header-row *matHeaderRowDef="tableFields"></tr>
-    <tr mat-row *matRowDef="let row; columns: tableFields" tabindex="0"></tr>
+    <tr mat-row *matRowDef="let row; columns: tableFields" tabindex="0"
+        (click)="clickedRow(row)"></tr>
 
     <!-- No Match -->
     <tr class="mat-row" *matNoDataRow>
@@ -46,7 +47,7 @@
     Create
   </button>
   
-  <button routerLink="/user/form/" (click)='getSelectedName()' mat-raised-button color="warn">
+  <button routerLink="/user/form/" mat-raised-button color="warn">
     Edit
   </button>
   

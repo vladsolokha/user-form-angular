@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { userStateSelector } from 'src/app/core/store/user/user.selector';
 import {User, UserState} from "../../core/store/user/user.state";
 
 @Component({
@@ -9,8 +10,8 @@ import {User, UserState} from "../../core/store/user/user.state";
 export class UserFormComponent implements OnInit {
 
   @Input() 
-    user: User | undefined;
-    
+    selectedUser = 
+
 
   constructor(   ) { }
 

@@ -47,7 +47,7 @@
     Create
   </button>
   
-  <button routerLink="/user/form/" mat-raised-button color="warn">
+  <button routerLink="/user/form/{{selectedUser.id}}" mat-raised-button color="warn">
     Edit
   </button>
   
@@ -58,4 +58,8 @@
   <button routerLink="/" mat-raised-button color="accent">
     Back
   </button>
+</div>
+
+<div *ngIf='selectedUser'>
+  <h2>{{selectedUser.name}} {{selectedUser.id}}</h2>
 </div>

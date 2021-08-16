@@ -23,6 +23,7 @@ export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
   tableFields: string[] = ['name', 'updated'];
   tableSource!: MatTableDataSource<User>;
 
+
   ngAfterViewInit(): void {
     this.userFacade
     .retrieve()
@@ -52,8 +53,10 @@ export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
     this.tableSource.filter = filterValue.trim().toLowerCase();
   }
 
-  selectedUser?: User;
+  selectedUser?: User | undefined;
   clickedRow(name: User): void {
+    
     this.selectedUser = name;
+    
   }
 }

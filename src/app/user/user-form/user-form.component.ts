@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { userStateSelector } from 'src/app/core/store/user/user.selector';
-import {User, UserState} from "../../core/store/user/user.state";
+import {UserSearchComponent} from 'src/app/user/user-search/user-search.component'
+import { User } from 'src/app/core/store/user/user.state';
 
 @Component({
   
@@ -8,10 +8,15 @@ import {User, UserState} from "../../core/store/user/user.state";
   styleUrls: ['./user-form.component.scss']
 })
 export class UserFormComponent implements OnInit {
+  
+  @Input() selectedUser?: User;
+    
 
-  @Input() 
-    selectedUser = 
-
+  // name: User = {
+  //   firstName: '',
+  //   middleName: '',
+  //   lastName: '',
+  // }
 
   constructor(   ) { }
 

@@ -95,3 +95,15 @@ Good info but not what I was looking for
 Going to read https://angular.io/tutorial/toh-pt6
 Probably closest I will get. Will read the part about "update heroes" section
 Which I speculate will work like my edit button. 
+
+Next read about click event binding. click event handler
+
+What needs to happen is...
+1. from selected row add click handler to point to search component method
+    line 26, (click)='clickedRow(row)'
+2. the method will store the User.name in search component
+    line 55-58, I should try outputting result? IT WORKS
+3. form component will @input the method from the other component
+4. name will need to be separtated into f,m,l
+5. interpolation or prop binding will diplay names in each box on HTML templateUrl
+

@@ -15,7 +15,4 @@ export class UserService {
     return this.httpClient.post<User[]>(AppComponent.api.user.retrieve, {});
   }
 
-  // getUserName(): Observable<User[]> {
-  //   return this.httpClient.get<User[]>(AppComponent.api.user.retrieve, {});
-  // }
 }

@@ -55,7 +55,6 @@ export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
 
   selectedUser?: User | undefined;
   clickedRow(name: User): void {
-    
     this.selectedUser = name;
     
   }

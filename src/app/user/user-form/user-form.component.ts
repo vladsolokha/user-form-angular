@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {UserSearchComponent} from 'src/app/user/user-search/user-search.component'
 import { User } from 'src/app/core/store/user/user.state';
+import { UserService } from 'src/app/core/service/user/user.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   
@@ -9,8 +12,8 @@ import { User } from 'src/app/core/store/user/user.state';
 })
 export class UserFormComponent implements OnInit {
   
+  
   @Input() selectedUser?: User;
-    
 
   // name: User = {
   //   firstName: '',
@@ -18,10 +21,14 @@ export class UserFormComponent implements OnInit {
   //   lastName: '',
   // }
 
-  constructor(   ) { }
+  constructor(
+    private route: ActivatedRoute,
+    private UserService: UserService,
+    private location: Location,
+    private userSearchComponent: UserSearchComponent
+  ) { }
 
-  ngOnInit(): void { };
-  
+  ngOnInit(): void {  }
   }
 
 

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {User, UserState} from "../../store/user/user.state";
+import {initialUserState, User, UserState} from "../../store/user/user.state";
 import {Observable} from "rxjs";
 import {AppComponent} from "../../../app.component";
+
 
 @Injectable({
   providedIn: 'root'

@@ -43,11 +43,11 @@
 <!-- Button Nav -->
 <div class="button-container">
 
-  <button routerLink="/user/form" mat-raised-button color="primary">
+  <button routerLink="user/form" mat-raised-button color="primary">
     Create
   </button>
   
-  <button routerLink="/user/form/{{selectedUser.id}}" mat-raised-button color="warn">
+  <button routerLink="user/form" mat-raised-button color="warn">
     Edit
   </button>
   
@@ -61,5 +61,5 @@
 </div>
 
 <div *ngIf='selectedUser'>
-  <h2>{{selectedUser.name}} {{selectedUser.id}}</h2>
+  <h2>{{selectedUser.name}} {{selectedUser.id}} {{selectedUser}}</h2>
 </div>

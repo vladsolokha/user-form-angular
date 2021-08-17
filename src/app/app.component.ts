@@ -11,6 +11,7 @@ export class AppComponent {
   static readonly api = {
     user: {
       retrieve: `api/user/retrieve`,
+      retrieveId: `api/id/retrieve`,
     },
   };
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {initialUserState, User, UserState} from "../../store/user/user.state";
+import { User } from "../../store/user/user.state";
 import {Observable} from "rxjs";
 import {AppComponent} from "../../../app.component";
 

@@ -5,17 +5,17 @@
   
   <mat-form-field appearance="fill" >
     <mat-label>First Name</mat-label>
-    <input  matInput {{selectedUser}}> 
+    <input matInput> {{firstName}}
   </mat-form-field>
   
   <mat-form-field appearance="fill">
     <mat-label>Middle Name</mat-label>
-    <input  matInput> 
+    <input matInput> {{middleName}}
   </mat-form-field>
   
   <mat-form-field appearance="fill">
     <mat-label>Last Name</mat-label>
-    <input  matInput> 
+    <input matInput> {{lastName}}
   </mat-form-field>
   
   <div class="button-container">
@@ -27,7 +27,7 @@
     <button routerLink="/user" mat-raised-button color="accent">
       Back
     </button>
-  
+    
   </div>
 
 </div>

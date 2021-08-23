@@ -6,6 +6,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
 import {filter, takeUntil} from "rxjs/operators";
+import { Router} from '@angular/router';
 
 @Component({
   templateUrl: './user-search.component.html',
@@ -13,7 +14,9 @@ import {filter, takeUntil} from "rxjs/operators";
 })
 export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
 
-  constructor(private userFacade: UserFacade) {}
+  constructor(
+    private userFacade: UserFacade,
+    private router: Router) {}
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -46,6 +49,7 @@ export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
 
   ngOnInit(): void {
     this.userFacade.dispatchRetrieve();
+    
   }
 
   applyFilter(event: Event) {
@@ -56,6 +60,9 @@ export class UserSearchComponent implements AfterViewInit, OnDestroy, OnInit {
   selectedUser?: User | undefined;
   clickedRow(name: User): void {
     this.selectedUser = name;
-    
+  }
+  
+  clickedEdit(): void {
+    this.router.navigate(['user/form', this.selectedUser?.id], {});
   }
 }

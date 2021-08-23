@@ -25,6 +25,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'user', redirectTo: 'user/search', pathMatch: 'full' },
+      {path: 'user/form/:id', component: UserFormComponent},
       {path: 'user/form', component: UserFormComponent },
       {path: 'user/search', component: UserSearchComponent },
       {path: '', component: HomeComponent },

@@ -107,3 +107,12 @@ What needs to happen is...
 4. name will need to be separtated into f,m,l
 5. interpolation or prop binding will diplay names in each box on HTML templateUrl
 
+Logic above is bad
+
+Use click handlers on the icons to trigger actions.
+Use router.navigate feature inside click handler in ts to navigate
+to the new component and pass the id in the url
+On new component (form.ts) read the id from url
+use the value to make service call (or NgRx store select) to load entire object
+with the given id. 
+display object's fName, mName (if exists), lName

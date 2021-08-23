@@ -1,34 +1,34 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {UserSearchComponent} from 'src/app/user/user-search/user-search.component'
-import { User } from 'src/app/core/store/user/user.state';
-import { UserService } from 'src/app/core/service/user/user.service';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { UserState } from 'src/app/core/store/user/user.state';
+
 
 @Component({
   
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.scss']
 })
-export class UserFormComponent implements OnInit {
-  
-  
-  @Input() selectedUser?: User;
 
-  // name: User = {
-  //   firstName: '',
-  //   middleName: '',
-  //   lastName: '',
-  // }
+export class UserFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private UserService: UserService,
-    private location: Location,
-    private userSearchComponent: UserSearchComponent
+    private httpClient: HttpClient,
+    private user: UserState
   ) { }
-
-  ngOnInit(): void {  }
+  
+  userId = this.route.snapshot.paramMap.get("id");
+  apiUrl = 'AppComponent.api.user.'
+  
+  firstName = httpClient.get<>()
+  middleName = 'judy';
+  lastName = 'hello';
+  
+  ngOnInit(): void {
+    
+    
+  }
   }
 
 

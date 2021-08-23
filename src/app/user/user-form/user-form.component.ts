@@ -15,13 +15,12 @@ export class UserFormComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private httpClient: HttpClient,
-    private user: UserState
   ) { }
   
   userId = this.route.snapshot.paramMap.get("id");
-  apiUrl = 'AppComponent.api.user.'
+  firstNameUrl = `api/user/getFirstname/${this.userId}`;
   
-  firstName = httpClient.get<>()
+  firstName = this.httpClient.get(this.firstNameUrl);
   middleName = 'judy';
   lastName = 'hello';
   

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { UserState } from 'src/app/core/store/user/user.state';
+import { User, UserState } from 'src/app/core/store/user/user.state';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -18,9 +19,18 @@ export class UserFormComponent implements OnInit {
   ) { }
   
   userId = this.route.snapshot.paramMap.get("id");
-  firstNameUrl = `api/user/getFirstname/${this.userId}`;
-  
-  firstName = this.httpClient.get(this.firstNameUrl);
+
+  totalName = {
+    firstNameUrl: `api/user/getFirstname/${this.userId}`,
+    middleNameUrl: `api/user/getMiddlename/${this.userId}`,
+    lastNameUrl: `api/user/getLastname/${this.userId}`
+  }
+
+  firstName(): Observable<User[]> {
+    return this.httpClient.get<User[]>(this.totalName.firstNameUrl);
+  }
+
+  firstNameDisplay = this.firstName();
   middleName = 'judy';
   lastName = 'hello';
   

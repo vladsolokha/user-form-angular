@@ -115,4 +115,6 @@ to the new component and pass the id in the url
 On new component (form.ts) read the id from url
 use the value to make service call (or NgRx store select) to load entire object
 with the given id. 
+write a method that returns observable of name 
+
 display object's fName, mName (if exists), lName

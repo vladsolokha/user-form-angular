@@ -20,17 +20,16 @@ export class UserFormComponent implements OnInit {
   
   userId = this.route.snapshot.paramMap.get("id");
 
-  totalName = {
-    firstNameUrl: `api/user/getFirstname/${this.userId}`,
-    middleNameUrl: `api/user/getMiddlename/${this.userId}`,
-    lastNameUrl: `api/user/getLastname/${this.userId}`
-  }
+  firstNameUrl= `api/user/retrieve/${this.userId}`;
+  middleNameUrl= `api/user/getMiddlename/${this.userId}`;
+  lastNameUrl= `api/user/getLastname/${this.userId}`;
+
 
   firstName(): Observable<User[]> {
-    return this.httpClient.get<User[]>(this.totalName.firstNameUrl);
+    return this.httpClient.get<User[]>(this.firstNameUrl);
   }
 
-  firstNameDisplay = this.firstName();
+  firstNameDisplay = JSON.stringify(this.firstName());
   middleName = 'judy';
   lastName = 'hello';
   

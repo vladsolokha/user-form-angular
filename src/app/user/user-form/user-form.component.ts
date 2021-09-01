@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User} from 'src/app/core/store/user/user.state';
+import { UserFacade } from 'src/app/core/store/user/user.facade';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { User, UserState } from 'src/app/core/store/user/user.state';
-import { Observable } from 'rxjs';
 
 
 @Component({
@@ -13,28 +12,20 @@ import { Observable } from 'rxjs';
 
 export class UserFormComponent implements OnInit {
 
-  constructor(
-    private route: ActivatedRoute,
-    private httpClient: HttpClient,
-  ) { }
-  
   userId = this.route.snapshot.paramMap.get("id");
 
-  firstNameUrl= `api/user/retrieve/${this.userId}`;
-  middleNameUrl= `api/user/getMiddlename/${this.userId}`;
-  lastNameUrl= `api/user/getLastname/${this.userId}`;
+  user: User | undefined;
 
-
-  firstName(): Observable<User[]> {
-    return this.httpClient.get<User[]>(this.firstNameUrl);
-  }
-
-  firstNameDisplay = JSON.stringify(this.firstName());
-  middleName = 'judy';
-  lastName = 'hello';
+  constructor(
+    private userFacade: UserFacade,
+    private route: ActivatedRoute
+    ) { }
+  
   
   ngOnInit(): void {
-    
+    this.userFacade
+    .retrieveById(`${this.userId}`)
+    .subscribe(user => this.user = user);
     
   }
   }
